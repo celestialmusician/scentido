@@ -1,0 +1,677 @@
+/*==================================================
+                SCENTIDO
+          WHITE LUXURY NAVBAR
+==================================================*/
+
+
+/*==========================================
+                NAVBAR
+==========================================*/
+
+.navbar{
+
+    padding:16px 0;
+
+}
+
+
+/*==========================================
+            NAVBAR CONTAINER
+==========================================*/
+
+.navbar-container{
+
+    width:100%;
+
+    max-width:1440px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/*==========================================
+                LOGO
+==========================================*/
+
+.logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    text-decoration:none;
+
+    transition:var(--transition-normal);
+
+}
+
+.logo:hover{
+
+    opacity:.85;
+
+}
+
+
+/*==========================================
+            LOGO TITLE
+==========================================*/
+
+.logo-title{
+
+    font-family:var(--font-logo);
+
+    font-size:clamp(26px,2.6vw,38px);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:var(--text-primary);
+
+    line-height:1;
+
+}
+
+
+/*==========================================
+            LOGO TAGLINE
+==========================================*/
+
+.logo-tagline{
+
+    margin-top:8px;
+
+    font-size:clamp(8px,1vw,11px);
+
+    font-family:var(--font-body);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:var(--text-muted);
+
+    white-space:nowrap;
+
+}
+
+/*==========================================
+            NAVIGATION
+==========================================*/
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:clamp(14px,2vw,28px);
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+/*==========================================
+            NAV LINKS
+==========================================*/
+
+.nav-link{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:var(--text-primary);
+
+    font-size:16px;
+
+    transition:var(--transition-normal);
+
+}
+
+.nav-link:hover{
+
+    background:var(--color-surface-alt);
+
+    color:var(--color-primary);
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.nav-link i{
+
+    transition:var(--transition-normal);
+
+}
+
+.nav-link:hover i{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==========================================
+            ACTIVE ICON
+==========================================*/
+
+.nav-link.active{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+
+/*==========================================
+            CTA BUTTON
+==========================================*/
+
+.navbar-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+/*==========================================
+            MENU TOGGLE
+==========================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--text-primary);
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+    transition:var(--transition-normal);
+
+}
+
+.menu-toggle:hover{
+
+    background:var(--color-surface-alt);
+
+}
+
+.menu-toggle i{
+
+    font-size:20px;
+
+}
+
+/*==========================================
+            WISHLIST BADGE
+==========================================*/
+
+.wishlist-nav{
+
+    position:relative;
+
+}
+
+.wishlist-count{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-10px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transform:scale(0);
+
+    transition:.3s;
+
+}
+
+.wishlist-count.active{
+
+    transform:scale(1);
+
+}
+
+/*==========================================
+            CART BADGE
+==========================================*/
+
+.cart-nav{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.cart-count{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-10px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+/*==================================================
+            RESPONSIVE NAVBAR
+==================================================*/
+
+/* Tablet */
+
+@media (max-width:1024px){
+
+    .navbar{
+
+        padding:13px 0;
+
+    }
+
+    .logo-title{
+
+        font-size:28px;
+
+        letter-spacing:3px;
+
+    }
+
+    .logo-tagline{
+
+        font-size:9px;
+
+        letter-spacing:3px;
+
+    }
+
+    .nav-menu{
+
+        gap:18px;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        height:76px;
+
+        display:flex;
+
+        align-items:center;
+
+        padding:10px 0 14px;
+
+    }
+
+    .logo-title{
+
+        font-size:22px;
+
+        letter-spacing:2px;
+
+    }
+
+    .logo-tagline{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:none;
+
+    }
+
+    .nav-menu{
+
+        position:fixed;
+
+        top:72px;
+
+        left:-100%;
+
+        width:100%;
+
+        height:calc(100vh - 72px);
+
+        background:#fff;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:center;
+
+        gap:24px;
+
+        padding-top:40px;
+
+        transition:var(--transition-normal);
+
+        z-index:999;
+
+    }
+
+    .nav-menu.active{
+
+        left:0;
+
+    }
+
+    .nav-link{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:22px;
+
+    }
+
+
+.wishlist-count,
+.cart-count{
+
+    margin-left:auto;
+
+    right:0;
+
+    top:0;
+
+    position:relative;
+
+}
+}
+
+/*==================================================
+            MOBILE DRAWER MENU
+==================================================*/
+
+.mobile-menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:998;
+
+}
+
+/*==========================================
+            MOBILE MENU PANEL
+==========================================*/
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+
+    left:-100%;
+
+    width:min(320px,82vw);
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#fff;
+
+    padding:36px 30px 40px;
+
+    overflow-y:auto;
+
+    z-index:999;
+
+    box-shadow:var(--shadow-lg);
+
+    transition:var(--transition-normal);
+
+}
+
+.mobile-close{
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    align-self:flex-end;
+
+    font-size:22px;
+
+    margin-bottom:30px;
+
+}
+
+.mobile-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-decoration:none;
+
+    color:var(--text-primary);
+
+    font-size:17px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid var(--color-border);
+
+    transition:.25s;
+
+}
+
+.mobile-menu a:hover{
+
+    padding-left:10px;
+
+}
+
+.mobile-menu i{
+
+    width:24px;
+
+    text-align:center;
+
+}
+
+/* Open State */
+
+.mobile-menu.active{
+
+    left:0;
+
+}
+
+.mobile-menu-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* Hide on Desktop */
+
+@media (min-width:769px){
+
+    .mobile-menu,
+
+    .mobile-menu-overlay{
+
+        display:none;
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar-nav{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .menu-toggle i{
+
+        font-size:16px;
+
+    }
+
+    .navbar-container{
+
+        padding:0 16px;
+
+    }
+
+    .logo-title{
+
+        font-size:22px;
+
+        letter-spacing:2px;
+
+    }
+
+    .logo{
+
+        max-width:70%;
+
+    }
+
+}

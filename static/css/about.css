@@ -1,0 +1,117 @@
+/*==========================================
+        BRAND STORY
+==========================================*/
+
+.brand-story{
+
+    padding:180px 0;
+
+}
+
+.brand-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+
+    align-items:center;
+
+}
+
+.brand-image img{
+
+    width:100%;
+
+    border-radius:6px;
+
+}
+
+.brand-label{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    color:#9d9d9d;
+
+}
+
+.brand-content h2{
+
+    font-size:72px;
+
+    line-height:1;
+
+    margin-bottom:35px;
+
+}
+
+.brand-content p{
+
+    max-width:520px;
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+}
+
+/*==========================================
+                RESPONSIVE
+==========================================*/
+
+@media (max-width:992px){
+
+    .brand-story{
+
+        padding:120px 0;
+
+    }
+
+    .brand-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .brand-content h2{
+
+        font-size:52px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .brand-story{
+
+        padding:90px 0;
+
+    }
+
+    .brand-content h2{
+
+        font-size:38px;
+
+    }
+
+    .brand-content p{
+
+        max-width:none;
+
+        margin-bottom:32px;
+
+    }
+
+}

@@ -1,0 +1,54 @@
+{% extends "app/base.html" %}
+
+{% load static %}
+
+{% block title %}
+
+Wishlist | SCENTIDO
+
+{% endblock %}
+
+{% block content %}
+
+<section class="wishlist-page">
+
+    <div class="container-custom">
+
+        <div class="wishlist-header">
+
+            <span class="section-label">
+
+                YOUR COLLECTION
+
+            </span>
+
+            <h1>
+
+                Wishlist
+
+            </h1>
+
+        </div>
+
+        <div id="wishlistContainer">
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+      href="{% static 'css/wishlist.css' %}">
+
+{% endblock %}
+
+{% block extra_js %}
+
+<script src="{% static 'js/wishlist.js' %}"></script>
+
+{% endblock %}

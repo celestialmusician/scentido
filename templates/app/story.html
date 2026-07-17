@@ -1,0 +1,527 @@
+{% extends "app/base.html" %}
+
+{% load static %}
+
+{% block title %}
+Our Story | SCENTIDO
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+      href="{% static 'css/story.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<!--==========================================
+            STORY HERO
+===========================================-->
+
+<section class="story-hero">
+
+    <div class="story-overlay"></div>
+
+    <div class="container-custom">
+
+        <div class="story-content">
+
+            <span class="story-label">
+
+                OUR STORY
+
+            </span>
+
+            <h1 class="story-title">
+
+                CRAFTED <br>
+
+                BEYOND <br>
+
+                FRAGRANCE
+
+            </h1>
+
+            <p class="story-description">
+
+                Every fragrance begins with a vision.
+
+                At SCENTIDO, we create timeless perfumes
+
+                inspired by elegance, emotion,
+
+                and unforgettable memories.
+
+            </p>
+
+            <a href="{% url 'collections' %}"
+
+               class="btn-luxury">
+
+                <span>
+
+                    Explore Collection
+
+                </span>
+
+                <i class="fa-solid fa-arrow-right-long"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="story-scroll">
+
+        <span>Scroll</span>
+
+        <div class="story-scroll-line"></div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+            BRAND PHILOSOPHY
+===========================================-->
+
+<section class="brand-philosophy">
+
+    <div class="container-custom">
+
+        <div class="philosophy-grid">
+
+            <!-- Left -->
+
+            <div class="philosophy-content">
+
+                <span class="section-label">
+
+                    OUR PHILOSOPHY
+
+                </span>
+
+                <h2>
+
+                    Every fragrance tells
+                    a timeless story.
+
+                </h2>
+
+                <p>
+
+                    At SCENTIDO, we believe perfume is more than
+                    a scent. It is an emotion, a memory, and an
+                    invisible signature that defines elegance.
+
+                </p>
+
+                <p>
+
+                    Every bottle is thoughtfully crafted using
+                    premium ingredients and refined artistry to
+                    create an unforgettable experience.
+
+                </p>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="philosophy-card">
+
+                <div class="quote-mark">
+
+                    "
+
+                </div>
+
+                <p>
+
+                    Luxury is never loud.
+                    It is remembered through
+                    timeless details and
+                    unforgettable fragrance.
+
+                </p>
+
+                <span>
+
+                    — SCENTIDO
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+                OUR JOURNEY
+===========================================-->
+
+<section class="story-timeline">
+
+    <div class="container-custom">
+
+        <div class="timeline-heading">
+
+            <span class="section-label">
+
+                OUR JOURNEY
+
+            </span>
+
+            <h2>
+
+                A Journey Crafted <br>
+                With Passion
+
+            </h2>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2022
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        The Beginning
+
+                    </h3>
+
+                    <p>
+
+                        SCENTIDO was born with a vision to redefine
+                        luxury fragrances through timeless elegance.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2023
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        Signature Collection
+
+                    </h3>
+
+                    <p>
+
+                        The first exclusive collection introduced
+                        refined scents inspired by modern luxury.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2024
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        Crafted Excellence
+
+                    </h3>
+
+                    <p>
+
+                        Every fragrance became a blend of artistry,
+                        innovation, and unforgettable memories.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2025
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        Global Vision
+
+                    </h3>
+
+                    <p>
+
+                        SCENTIDO continues creating fragrances that
+                        inspire confidence, elegance, and individuality.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+            CRAFTSMANSHIP
+===========================================-->
+
+<section class="craftsmanship">
+
+    <div class="container-custom">
+
+        <div class="craft-grid">
+
+            <!-- Image -->
+
+            <div class="craft-image">
+
+                <img
+
+                    src="{% static 'images/background/story-image.jpg' %}"
+
+                    alt="SCENTIDO Story">
+
+            </div>
+
+            <!-- Content -->
+
+            <div class="craft-content">
+
+                <span class="section-label">
+
+                    CRAFTSMANSHIP
+
+                </span>
+
+                <h2>
+
+                    Luxury Crafted <br>
+
+                    With Precision
+
+                </h2>
+
+                <p>
+
+                    Every SCENTIDO fragrance is thoughtfully
+                    created using carefully selected ingredients,
+                    refined craftsmanship, and timeless inspiration.
+
+                </p>
+
+                <p>
+
+                    From the very first sketch of the bottle to the
+                    final drop of fragrance, every detail reflects
+                    elegance, sophistication, and uncompromising quality.
+
+                </p>
+
+                <a href="{% url 'collections' %}"
+
+                   class="btn-luxury">
+
+                    <span>
+
+                        Discover Collection
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right-long"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+            SCENTIDO PROMISE
+===========================================-->
+
+<section class="story-promise">
+
+    <div class="container-custom">
+
+        <div class="promise-heading">
+
+            <span class="section-label">
+
+                THE SCENTIDO PROMISE
+
+            </span>
+
+            <h2>
+
+                Luxury In Every Detail
+
+            </h2>
+
+        </div>
+
+        <div class="promise-grid">
+
+            <div class="promise-card">
+
+                <i class="fa-solid fa-seedling"></i>
+
+                <h3>
+
+                    Premium Ingredients
+
+                </h3>
+
+                <p>
+
+                    Carefully selected fragrance oils sourced for exceptional quality and elegance.
+
+                </p>
+
+            </div>
+
+            <div class="promise-card">
+
+                <i class="fa-solid fa-gem"></i>
+
+                <h3>
+
+                    Timeless Design
+
+                </h3>
+
+                <p>
+
+                    Every bottle reflects minimalist luxury with attention to every detail.
+
+                </p>
+
+            </div>
+
+            <div class="promise-card">
+
+                <i class="fa-solid fa-flask"></i>
+
+                <h3>
+
+                    Refined Craftsmanship
+
+                </h3>
+
+                <p>
+
+                    Every fragrance is developed with passion, precision and artistic excellence.
+
+                </p>
+
+            </div>
+
+            <div class="promise-card">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <h3>
+
+                    Lasting Impression
+
+                </h3>
+
+                <p>
+
+                    A signature fragrance that leaves an unforgettable memory wherever you go.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+                CTA
+===========================================-->
+
+<section class="story-cta">
+
+    <div class="container-custom">
+
+        <span>
+
+            Experience Luxury
+
+        </span>
+
+        <h2>
+
+            Discover The World <br>
+
+            Of SCENTIDO
+
+        </h2>
+
+        <a href="{% url 'collections' %}"
+
+           class="btn-luxury">
+
+            <span>
+
+                Explore Collection
+
+            </span>
+
+            <i class="fa-solid fa-arrow-right-long"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

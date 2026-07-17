@@ -1,0 +1,94 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="register-page">
+
+    <div class="register-container">
+
+        <!-- Left Side -->
+
+        <div class="register-left">
+
+            <span class="register-tag">
+
+                JOIN SCENTIDO
+
+            </span>
+
+            <h1>
+
+                Create Your Account
+
+            </h1>
+
+            <p>
+
+                Become a member to discover exclusive collections, manage your wishlist, and enjoy a personalized luxury fragrance experience.
+
+            </p>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="register-right">
+
+            <form>
+
+                <input
+                    type="text"
+                    placeholder="Full Name">
+
+                <input
+                    type="email"
+                    placeholder="Email Address">
+
+                <input
+                    type="tel"
+                    placeholder="Mobile Number">
+
+                <input
+                    type="password"
+                    placeholder="Password">
+
+                <input
+                    type="password"
+                    placeholder="Confirm Password">
+
+                <button
+                    type="button"
+                    id="registerBtn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <p class="login-link">
+
+                Already have an account?
+
+                <a href="{% url 'login' %}">
+
+                    Sign In
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{% static 'js/register.js' %}"></script>
+
+{% endblock %}

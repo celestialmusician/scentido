@@ -1,0 +1,895 @@
+/*==================================================
+            SCENTIDO
+        COLLECTION v2.0
+==================================================*/
+
+
+/*==========================================
+        SIGNATURE SECTION
+==========================================*/
+
+.signature-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:clamp(100px,12vw,180px) 0;
+
+    background:#fafaf8;
+
+}
+
+
+/*==========================================
+        BACKGROUND LIGHT
+==========================================*/
+
+.signature-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-250px;
+
+    top:-220px;
+
+    width:850px;
+
+    height:850px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.95),
+
+            rgba(255,255,255,.45),
+
+            transparent 72%
+
+        );
+
+    filter:blur(100px);
+
+    pointer-events:none;
+
+}
+
+
+.signature-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-180px;
+
+    bottom:-180px;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,0,0,.025),
+
+            transparent 70%
+
+        );
+
+    filter:blur(110px);
+
+    pointer-events:none;
+
+}
+
+
+/*==========================================
+            CONTAINER
+==========================================*/
+
+.signature-section .container-custom{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+/*==========================================
+        SECTION HEADER
+==========================================*/
+
+.section-heading{
+
+    max-width:760px;
+
+    margin:0 auto clamp(60px,8vw,120px);
+
+    text-align:center;
+
+}
+
+
+/*==========================================
+        LABEL
+==========================================*/
+
+.section-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:24px;
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:#8b8b8b;
+
+}
+
+.section-label::before,
+
+.section-label::after{
+
+    content:"";
+
+    width:42px;
+
+    height:1px;
+
+    background:#d7d7d7;
+
+}
+
+
+/*==========================================
+        TITLE
+==========================================*/
+
+.section-title{
+
+    margin-bottom:30px;
+
+    font-family:var(--font-heading);
+
+    font-size:clamp(56px,6vw,92px);
+
+    font-weight:400;
+
+    line-height:.95;
+
+    letter-spacing:-2px;
+
+    color:#111111;
+
+}
+
+
+/*==========================================
+        DESCRIPTION
+==========================================*/
+
+.section-description{
+
+    max-width:620px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#666666;
+
+}
+
+
+/*==========================================
+        COLLECTION LIST
+==========================================*/
+
+.collection-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:0;
+
+}
+
+/*==================================================
+            COLLECTION ITEM
+==================================================*/
+
+.collection-item{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:90px 1fr 420px 170px;
+
+    align-items:center;
+
+    gap:clamp(30px,5vw,60px);
+
+    padding:90px 0;
+
+    border-top:1px solid #e6e6e2;
+
+    transition:all .55s cubic-bezier(.19,1,.22,1);
+
+}
+
+.collection-item:last-child{
+
+    border-bottom:1px solid #e6e6e2;
+
+}
+
+.collection-item:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================================
+            NUMBER
+==========================================*/
+
+.collection-number{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    color:#b0b0b0;
+
+}
+
+
+/*==========================================
+            CONTENT
+==========================================*/
+
+.collection-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+}
+
+
+/*==========================================
+            PERFUME NAME
+==========================================*/
+
+.collection-content h3{
+
+    margin-bottom:22px;
+
+    font-family:var(--font-heading);
+
+    font-size:clamp(54px,4vw,72px);
+
+    font-weight:500;
+
+    line-height:.95;
+
+    letter-spacing:-1px;
+
+    color:#111111;
+
+    transition:var(--transition-normal);
+
+}
+
+.collection-item:hover h3{
+
+    transform:translateX(8px);
+
+}
+
+
+/*==========================================
+            DESCRIPTION
+==========================================*/
+
+.collection-content p{
+
+    max-width:420px;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#666666;
+
+}
+
+
+/*==========================================
+            DISCOVER
+==========================================*/
+
+.collection-link{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#111111;
+
+    transition:all .35s ease;
+
+}
+
+.collection-link i{
+
+    transition:.35s;
+
+}
+
+.collection-item:hover .collection-link{
+
+    letter-spacing:4px;
+
+}
+
+.collection-item:hover .collection-link i{
+
+    transform:translateX(10px);
+
+}
+
+/*==================================================
+            COLLECTION IMAGE
+==================================================*/
+
+.collection-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:460px;
+
+    z-index:2;
+
+}
+
+
+/*==========================================
+            IMAGE GLOW
+==========================================*/
+
+.collection-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.95),
+
+            rgba(255,255,255,.45),
+
+            transparent 72%
+
+        );
+
+    filter:blur(60px);
+
+    z-index:0;
+
+}
+
+
+/*==========================================
+            PRODUCT IMAGE
+==========================================*/
+
+.collection-image img{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    max-width:min(100%,430px);
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:
+
+        transform .8s cubic-bezier(.19,1,.22,1),
+
+        filter .8s cubic-bezier(.19,1,.22,1);
+
+    filter:
+
+        drop-shadow(0 30px 45px rgba(0,0,0,.08))
+
+        drop-shadow(0 70px 90px rgba(0,0,0,.10));
+
+}
+
+
+/*==========================================
+            PRODUCT HOVER
+==========================================*/
+
+.collection-item:hover .collection-image img{
+
+    transform:
+
+        translateY(-16px)
+
+        scale(1.03);
+
+}
+
+
+/*==========================================
+            SHADOW
+==========================================*/
+
+.collection-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:220px;
+
+    height:35px;
+
+    background:
+
+        radial-gradient(
+
+            ellipse,
+
+            rgba(0,0,0,.18),
+
+            transparent 75%
+
+        );
+
+    filter:blur(18px);
+
+}
+
+
+/*==========================================
+        IMAGE REVEAL
+==========================================*/
+
+.collection-image{
+
+    animation:imageReveal 1.2s ease both;
+
+}
+
+@keyframes imageReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==========================================
+        CONTENT REVEAL
+==========================================*/
+
+.collection-content{
+
+    animation:textReveal .9s ease both;
+
+}
+
+@keyframes textReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*==========================================
+        HOVER LINE
+==========================================*/
+
+.collection-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-1px;
+
+    width:0;
+
+    height:1px;
+
+    background:#111111;
+
+    transition:.8s cubic-bezier(.19,1,.22,1);
+
+}
+
+.collection-item:hover::after{
+
+    width:100%;
+
+}
+
+/*==================================================
+        COLLECTION RESPONSIVE
+==================================================*/
+
+
+/*==========================================
+        LARGE LAPTOP
+==========================================*/
+
+@media (max-width:1400px){
+
+    .collection-item{
+
+        grid-template-columns:80px 1fr 360px 150px;
+
+        gap:40px;
+
+    }
+
+    .collection-content h3{
+
+        font-size:60px;
+
+    }
+
+}
+
+
+/*==========================================
+                TABLET
+==========================================*/
+
+@media (max-width:1024px){
+
+    .signature-section{
+
+        padding:140px 0;
+
+    }
+
+    .section-heading{
+
+        margin-bottom:90px;
+
+    }
+
+    .collection-item{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        text-align:center;
+
+        padding:80px 0;
+
+    }
+
+    .collection-number{
+
+        justify-content:center;
+
+    }
+
+    .collection-content{
+
+        order:2;
+
+    }
+
+    .collection-image{
+
+        order:1;
+
+        min-height:320px;
+
+    }
+
+    .collection-link{
+
+        order:3;
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*==========================================
+                MOBILE
+==========================================*/
+
+@media (max-width:768px){
+
+    .signature-section{
+
+        padding:100px 0;
+
+    }
+
+    .section-title{
+
+        font-size:48px;
+
+        line-height:1.05;
+
+    }
+
+    .section-description{
+
+        font-size:16px;
+
+    }
+
+    .collection-item{
+
+        padding:60px 0;
+
+        gap:28px;
+
+    }
+
+    .collection-content h3{
+
+    font-size:clamp(32px,9vw,42px);
+
+    }
+
+    .collection-content p{
+
+        max-width:100%;
+
+        font-size:16px;
+
+    }
+
+    .collection-image{
+
+        min-height:260px;
+
+    }
+
+    .collection-image img{
+
+    width:80%;
+
+    max-width:260px;
+
+    margin:auto;
+
+    }
+
+    .section-label{
+
+    justify-content:center;
+
+    letter-spacing:4px;
+
+    }
+
+}
+
+
+/*==========================================
+            SMALL MOBILE
+==========================================*/
+
+@media (max-width:480px){
+
+    .section-title{
+
+        font-size:38px;
+
+    }
+
+    .collection-content h3{
+
+        font-size:34px;
+
+    }
+
+    .collection-image img{
+
+        width:75%;
+
+        max-width:220px;
+
+    }
+
+}
+
+
+/*==================================================
+        MICRO INTERACTIONS
+==================================================*/
+
+.collection-item{
+
+    cursor:pointer;
+
+}
+
+.collection-item:hover .collection-number{
+
+    color:#111111;
+
+    transform:scale(1.08);
+
+}
+
+.collection-number{
+
+    transition:all .35s ease;
+
+}
+
+.collection-item:hover .collection-content p{
+
+    color:#444444;
+
+}
+
+.collection-content p{
+
+    transition:color .35s ease;
+
+}
+
+
+/*==================================================
+        PERFORMANCE
+==================================================*/
+
+.collection-item,
+
+.collection-image img{
+
+    backface-visibility:hidden;
+
+    transform-style:preserve-3d;
+
+    will-change:transform;
+
+}
+
+
+/*==================================================
+        ACCESSIBILITY
+==================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .collection-item,
+
+    .collection-content,
+
+    .collection-image,
+
+    .collection-image img{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+

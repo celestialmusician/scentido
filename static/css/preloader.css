@@ -1,0 +1,162 @@
+/*==================================================
+            SCENTIDO PRELOADER
+==================================================*/
+
+#preloader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fafaf8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:opacity .8s ease,
+               visibility .8s ease;
+
+}
+
+
+
+
+
+/*==========================================
+            WRAPPER
+==========================================*/
+
+.preloader-wrapper{
+
+    text-align:center;
+
+}
+
+
+/*==========================================
+            LOGO
+==========================================*/
+
+.preloader-logo{
+
+    font-family:var(--font-logo);
+
+    font-size:62px;
+
+    font-weight:500;
+
+    letter-spacing:12px;
+
+    color:#111;
+
+    margin-bottom:18px;
+
+}
+
+
+/*==========================================
+            TAGLINE
+==========================================*/
+
+.preloader-text{
+
+    font-size:13px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#777;
+
+    margin-bottom:45px;
+
+}
+
+
+/*==========================================
+            LINE
+==========================================*/
+
+.preloader-line{
+
+    width:220px;
+
+    height:2px;
+
+    background:#e8e8e8;
+
+    overflow:hidden;
+
+    margin:auto;
+
+}
+
+
+.preloader-line span{
+
+    display:block;
+
+    width:0%;
+
+    height:100%;
+
+    background:#111;
+
+    animation:loading 1.4s ease forwards;
+
+}
+
+
+/*==========================================
+            KEYFRAMES
+==========================================*/
+
+@keyframes loading{
+
+    from{
+
+        width:0%;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+
+/*==========================================
+                RESPONSIVE
+==========================================*/
+
+@media (max-width:576px){
+
+    .preloader-logo{
+
+        font-size:38px;
+
+        letter-spacing:7px;
+    }
+
+    .preloader-text{
+
+        font-size:11px;
+
+        letter-spacing:3px;
+
+        margin-bottom:32px;
+    }
+
+    .preloader-line{
+
+        width:160px;
+    }
+}

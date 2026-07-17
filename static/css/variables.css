@@ -1,0 +1,264 @@
+/*==================================================
+                SCENTIDO
+           DESIGN SYSTEM v3.0
+==================================================*/
+
+:root{
+
+    /*==========================================
+                    COLORS
+    ==========================================*/
+
+    --color-primary:#111111;
+
+    --color-secondary:#555555;
+
+    --color-muted:#8A8A8A;
+
+    --color-background:#FAFAF8;
+
+    --color-surface:#FFFFFF;
+
+    --color-surface-alt:#F4F4F2;
+
+    --color-border:#E5E5E2;
+
+    --color-border-dark:#D8D8D5;
+
+    --color-white:#FFFFFF;
+
+    --color-black:#000000;
+
+    --color-success:#2E7D32;
+
+    --color-danger:#C62828;
+
+    --color-warning:#F9A825;
+
+
+    /*==========================================
+                    TEXT
+    ==========================================*/
+
+    --text-primary:#111111;
+
+    --text-secondary:#5E5E5E;
+
+    --text-muted:#909090;
+
+    --text-light:#B8B8B8;
+
+    --text-white:#FFFFFF;
+
+
+    /*==========================================
+                    FONTS
+    ==========================================*/
+
+    --font-logo:"Libre Bodoni", serif;
+
+    --font-heading:"Cormorant Garamond", serif;
+
+    --font-body:"Inter", sans-serif;
+
+
+    /*==========================================
+                FONT WEIGHTS
+    ==========================================*/
+
+    --fw-light:300;
+
+    --fw-regular:400;
+
+    --fw-medium:500;
+
+    --fw-semibold:600;
+
+    --fw-bold:700;
+
+
+    /*==========================================
+                FONT SIZES
+    ==========================================*/
+
+    --fs-xs:12px;
+
+    --fs-sm:14px;
+
+    --fs-md:16px;
+
+    --fs-lg:18px;
+
+    --fs-xl:22px;
+
+    --fs-2xl:30px;
+
+    --fs-3xl:42px;
+
+    --fs-4xl:56px;
+
+    --fs-5xl:72px;
+
+    --fs-hero:110px;
+
+
+    /*==========================================
+                LETTER SPACING
+    ==========================================*/
+
+    --ls-xs:.5px;
+
+    --ls-sm:1px;
+
+    --ls-md:2px;
+
+    --ls-lg:4px;
+
+    --ls-xl:6px;
+
+    --ls-hero:8px;
+
+        /*==========================================
+                LINE HEIGHT
+    ==========================================*/
+
+    --lh-tight:.9;
+
+    --lh-heading:1.1;
+
+    --lh-normal:1.6;
+
+    --lh-relaxed:1.9;
+
+    --lh-loose:2.2;
+
+
+    /*==========================================
+                CONTAINER
+    ==========================================*/
+
+    --container-width:1320px;
+
+    --container-padding:24px;
+
+
+    /*==========================================
+                SPACING
+    ==========================================*/
+
+    --space-xxs:4px;
+
+    --space-xs:8px;
+
+    --space-sm:12px;
+
+    --space-md:16px;
+
+    --space-lg:24px;
+
+    --space-xl:32px;
+
+    --space-2xl:48px;
+
+    --space-3xl:64px;
+
+    --space-4xl:80px;
+
+    --space-5xl:100px;
+
+    --space-6xl:140px;
+
+
+    /*==========================================
+            SECTION SPACING
+    ==========================================*/
+
+    --section-padding:140px;
+
+    --section-padding-large:180px;
+
+    --hero-padding-top:150px;
+
+    --hero-padding-bottom:120px;
+
+    --navbar-height:100px;
+
+
+    /*==========================================
+            BORDER RADIUS
+    ==========================================*/
+
+    --radius-xs:4px;
+
+    --radius-sm:8px;
+
+    --radius-md:12px;
+
+    --radius-lg:18px;
+
+    --radius-xl:24px;
+
+    --radius-pill:999px;
+
+
+    /*==========================================
+                SHADOWS
+    ==========================================*/
+
+    --shadow-sm:0 4px 10px rgba(0,0,0,.05);
+
+    --shadow-md:0 10px 25px rgba(0,0,0,.08);
+
+    --shadow-lg:0 20px 60px rgba(0,0,0,.12);
+
+    --shadow-xl:0 35px 90px rgba(0,0,0,.16);
+
+
+    /*==========================================
+            GLASS EFFECT
+    ==========================================*/
+
+    --glass-bg:rgba(255,255,255,.75);
+
+    --glass-border:rgba(255,255,255,.70);
+
+    --glass-blur:18px;
+
+
+    /*==========================================
+                TRANSITIONS
+    ==========================================*/
+
+    --transition-fast:.25s ease;
+
+    --transition-normal:.35s ease;
+
+    --transition-slow:.55s ease;
+
+    --transition-luxury:cubic-bezier(.19,1,.22,1);
+
+
+    /*==========================================
+                BUTTONS
+    ==========================================*/
+
+    --button-height:56px;
+
+    --button-padding:0 34px;
+
+
+    /*==========================================
+                Z INDEX
+    ==========================================*/
+
+    --z-dropdown:100;
+
+    --z-sticky:500;
+
+    --z-overlay:900;
+
+    --z-navbar:1000;
+
+    --z-modal:9999;
+
+}

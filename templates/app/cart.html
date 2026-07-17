@@ -1,0 +1,62 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %}
+
+Cart | SCENTIDO
+
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+      href="{% static 'css/cart.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="wishlist-page">
+
+    <div class="container-custom">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                YOUR BAG
+
+            </span>
+
+            <h1>
+
+                Shopping Cart
+
+            </h1>
+
+        </div>
+
+        <div class="cart-layout">
+
+    <div id="cartContainer">
+
+    </div>
+
+    <div id="cartSummary">
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+
+<script src="{% static 'js/cart-page.js' %}"></script>
+
+{% endblock %}

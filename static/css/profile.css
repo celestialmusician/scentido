@@ -1,0 +1,161 @@
+.profile-section{
+    background:#f6f6f6;
+    min-height:100vh;
+    padding:60px 20px;
+}
+
+.profile-container{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:35px;
+}
+
+.profile-card{
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    position:sticky;
+    top:120px;
+}
+
+.profile-top{
+    text-align:center;
+    border-bottom:1px solid #ececec;
+    padding-bottom:30px;
+    margin-bottom:30px;
+}
+
+.profile-top img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #111;
+    margin-bottom:20px;
+}
+
+.profile-top h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.profile-top p{
+    color:#777;
+    font-size:15px;
+}
+
+.profile-menu{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.profile-menu a{
+    text-decoration:none;
+    color:#222;
+    background:#fafafa;
+    border:1px solid #ececec;
+    padding:16px 18px;
+    border-radius:14px;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-weight:500;
+}
+
+.profile-menu a:hover{
+    background:#111;
+    color:#fff;
+    transform:translateX(8px);
+}
+
+.profile-content{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.welcome-card{
+    background:#111;
+    color:#fff;
+    border-radius:24px;
+    padding:50px;
+}
+
+.welcome-card small{
+    letter-spacing:3px;
+    color:#ccc;
+}
+
+.welcome-card h1{
+    margin:20px 0;
+    font-size:42px;
+    line-height:1.2;
+}
+
+.welcome-card p{
+    color:#ddd;
+    max-width:650px;
+    line-height:1.8;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.dash-box{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.dash-box:hover{
+    transform:translateY(-8px);
+}
+
+.dash-box h3{
+    color:#777;
+    margin-bottom:15px;
+}
+
+.dash-box h2{
+    font-size:44px;
+    margin-bottom:10px;
+}
+
+.dash-box p{
+    color:#888;
+}
+
+@media(max-width:991px){
+
+.profile-container{
+    grid-template-columns:1fr;
+}
+
+.profile-card{
+    position:relative;
+    top:0;
+}
+
+.dashboard-grid{
+    grid-template-columns:1fr;
+}
+
+.welcome-card{
+    padding:35px;
+}
+
+.welcome-card h1{
+    font-size:32px;
+}
+
+}

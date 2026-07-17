@@ -1,0 +1,148 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="profile-section">
+
+    <div class="profile-container">
+
+        <div class="profile-card">
+
+            <div class="profile-top">
+
+                <img
+                    src="{% static 'images/profile-avatar.png' %}"
+                    alt="Profile">
+
+                <h2 id="userName">
+                    Aswin S Arun
+                </h2>
+
+                <p id="userEmail">
+                    aswin@gmail.com
+                </p>
+
+            </div>
+
+            <div class="profile-menu">
+
+                <a href="#">
+                    <span>📦</span>
+                    My Orders
+                </a>
+
+                <a href="#">
+                    <span>❤️</span>
+                    Wishlist
+                </a>
+
+                <a href="#">
+                    <span>📍</span>
+                    Saved Addresses
+                </a>
+
+                <a href="{% url 'my_orders' %}"      class="profile-card">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span>My Orders</span>
+
+                </a>
+
+                <a href="#">
+                    <span>⚙️</span>
+                    Account Settings
+                </a>
+
+                <a href="#">
+                    <span>🔐</span>
+                    Change Password
+                </a>
+
+                <a href="#" id="logoutBtn">
+                    <span>🚪</span>
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="profile-content">
+
+            <div class="welcome-card">
+
+                <small>WELCOME BACK</small>
+
+                <h1>
+
+                    Your Luxury Fragrance Journey Starts Here
+
+                </h1>
+
+                <p>
+
+                    Manage your orders, wishlist and account details from one beautiful dashboard.
+
+                </p>
+
+            </div>
+
+            <div class="dashboard-grid">
+
+                <div class="dash-box">
+
+                    <h3>Orders</h3>
+
+                    <h2>08</h2>
+
+                    <p>Total Purchases</p>
+
+                </div>
+
+                <div class="dash-box">
+
+                    <h3>Wishlist</h3>
+
+                    <h2>15</h2>
+
+                    <p>Saved Perfumes</p>
+
+                </div>
+
+                <div class="dash-box">
+
+                    <h3>Addresses</h3>
+
+                    <h2>02</h2>
+
+                    <p>Saved Locations</p>
+
+                </div>
+
+                <div class="dash-box">
+
+                    <h3>Member</h3>
+
+                    <h2>Gold</h2>
+
+                    <p>Loyal Customer</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{% static 'js/profile.js' %}"></script>
+
+{% endblock %}

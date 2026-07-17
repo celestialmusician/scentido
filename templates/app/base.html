@@ -1,0 +1,533 @@
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+                    META
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
+
+    <meta
+        name="description"
+        content="SCENTIDO | Luxury Perfume House">
+
+    <meta
+        name="keywords"
+        content="Luxury Perfume, Fragrance, Eau De Parfum, SCENTIDO">
+
+    <meta
+        name="author"
+        content="SCENTIDO">
+
+    <meta
+        name="theme-color"
+        content="#FAFAF8">
+
+    <meta
+        name="color-scheme"
+        content="light">
+
+    <!-- ==========================================
+                    TITLE
+    =========================================== -->
+
+    <title>
+
+        {% block title %}
+            SCENTIDO | Crafted Beyond Fragrance
+        {% endblock %}
+
+    </title>
+
+    <!-- ==========================================
+                GOOGLE FONTS
+    =========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================
+                FONT AWESOME
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ==========================================
+                    CORE CSS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="{% static 'css/variables.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/base.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+    <!-- ==========================================
+                COMPONENT CSS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="{% static 'css/navbar.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/hero.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/collection.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/product.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/modal.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/about.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/marquee.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/footer.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/checkout.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/login.css' %}">
+
+    <!-- ==========================================
+                EFFECTS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="{% static 'css/animations.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/preloader.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/responsive.css' %}">
+
+    <!-- ==========================================
+                PAGE CSS
+    =========================================== -->
+
+    {% block extra_css %}
+    {% endblock %}
+
+</head>
+
+<header class="navbar">
+
+    <div class="container-custom navbar-container">
+
+        <!-- ==========================================
+                        LOGO
+        =========================================== -->
+
+        <a href="{% url 'home' %}" class="logo">
+
+            <span class="logo-title">
+                SCENTIDO
+            </span>
+
+            <span class="logo-tagline">
+                Crafted Beyond Fragrance
+            </span>
+
+        </a>
+
+
+        <!-- ==========================================
+                    DESKTOP NAVIGATION
+        =========================================== -->
+
+        <nav class="navbar-nav">
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="{% url 'home' %}"
+                       class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                       title="Home">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'collections' %}"
+                       class="nav-link {% if request.resolver_match.url_name == 'collections' %}active{% endif %}"
+                       title="Collections">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'wishlist' %}"
+                       class="nav-link wishlist-nav"
+                       title="Wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                        <span class="wishlist-count">
+                            0
+                        </span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'cart' %}"
+                       class="nav-link cart-nav"
+                       title="Cart">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <span class="cart-count">
+                            0
+                        </span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'profile' %}"
+                       class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}"
+                       title="Profile">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- ==========================================
+                    MOBILE MENU BUTTON
+        =========================================== -->
+
+        <button class="menu-toggle"
+                aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+                MOBILE MENU
+=========================================== -->
+
+<div class="mobile-menu-overlay"></div>
+
+<div class="mobile-menu">
+
+    <button class="mobile-close">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <a href="{% url 'home' %}">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="{% url 'collections' %}">
+        <i class="fa-solid fa-spray-can-sparkles"></i>
+        <span>Collections</span>
+    </a>
+
+    <a href="{% url 'wishlist' %}">
+        <i class="fa-regular fa-heart"></i>
+        <span>Wishlist</span>
+    </a>
+
+    <a href="{% url 'cart' %}">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Add To Bag</span>
+    </a>
+
+    <a href="{% url 'profile' %}">
+        <i class="fa-regular fa-user"></i>
+        <span>Profile</span>
+    </a>
+
+</div>
+
+<body>
+
+    <!-- ==========================================
+                    PRELOADER
+    =========================================== -->
+
+    <div id="preloader">
+
+        <div class="preloader-wrapper">
+
+            <h1 class="preloader-logo">
+
+                SCENTIDO
+
+            </h1>
+
+            <p class="preloader-text">
+
+                Crafted Beyond Fragrance
+
+            </p>
+
+            <div class="preloader-line">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+                    SITE WRAPPER
+    =========================================== -->
+
+    <div id="site-wrapper">
+
+        <!-- ==========================================
+                    MAIN CONTENT
+        =========================================== -->
+
+        <main id="main-content">
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+        <!-- ==========================================
+                QUICK VIEW MODAL
+        =========================================== -->
+
+        <div
+            class="quick-view-overlay"
+            id="quickView"
+            aria-hidden="true">
+
+            <div
+                class="quick-view-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="quickTitle">
+
+                <!-- Close -->
+
+                <button
+                    type="button"
+                    class="quick-close"
+                    id="quickClose"
+                    aria-label="Close Quick View">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+                <!-- Product Image -->
+
+                <div class="quick-image">
+
+                    <img
+                        id="quickImage"
+                        src=""
+                        alt="Perfume">
+
+                </div>
+
+                <!-- Product Details -->
+
+                <div class="quick-content">
+
+                    <span class="quick-label">
+
+                        Signature Collection
+
+                    </span>
+
+                    <h2 id="quickTitle"></h2>
+
+                    <p id="quickSubtitle"></p>
+
+                    <div
+                        id="quickPrice"
+                        class="quick-price"></div>
+
+                    <!-- Quantity -->
+
+                    <div class="quick-quantity">
+
+                        <button
+                            id="quickQtyMinus"
+                            type="button">
+
+                            −
+
+                        </button>
+
+                        <span id="quickQty">
+
+                            1
+
+                        </span>
+
+                        <button
+                            id="quickQtyPlus"
+                            type="button">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <div class="quick-buttons">
+
+                        <button
+                            id="quickCartBtn"
+                            class="btn-primary"
+                            type="button">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            Add To Bag
+
+                        </button>
+
+                        <button
+                            id="quickBuyNowBtn"
+                            class="btn-buy-now"
+                            type="button">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            Buy Now
+
+                        </button>
+
+                        <button
+                            id="quickWishlistBtn"
+                            class="btn-secondary"
+                            type="button">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                            Wishlist
+
+                        </button>
+
+                        <a
+                            href="#"
+                            id="quickProductLink"
+                            class="btn-outline">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+                <!-- ==========================================
+                        FOOTER
+        =========================================== -->
+
+        {% include 'app/footer.html' %}
+
+    </div>
+    <!-- End Site Wrapper -->
+
+
+    <!-- ==========================================
+                    PAGE JAVASCRIPT
+    =========================================== -->
+
+    {% block extra_js %}
+    {% endblock %}
+
+
+    <!-- ==========================================
+                    VENDOR JS
+    =========================================== -->
+
+    <script src="{% static 'vendor/lenis.min.js' %}"></script>
+
+
+    <!-- ==========================================
+                    MAIN JS
+    =========================================== -->
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="{% static 'js/preloader.js' %}"></script>
+
+    <script src="{% static 'js/smooth-scroll.js' %}"></script>
+
+
+    <!-- ==========================================
+                    COMPONENT JS
+    =========================================== -->
+
+    <script src="{% static 'js/navbar.js' %}"></script>
+
+    <script src="{% static 'js/quick-view.js' %}"></script>
+
+    <script src="{% static 'js/wishlist.js' %}"></script>
+
+    <script src="{% static 'js/cart.js' %}"></script>
+
+    <script src="{% static 'js/wishlist-count.js' %}"></script>
+
+    <script src="{% static 'js/cart-count.js' %}"></script>
+
+
+</body>
+
+</html>
+

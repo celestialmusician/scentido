@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="success-page">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+        <h1>Order Placed Successfully</h1>
+
+        <p>
+            Thank you for choosing SCENTIDO.
+            Your order has been received successfully.
+        </p>
+
+        <a href="{% url 'home' %}" class="continue-btn">
+
+            Continue Shopping
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

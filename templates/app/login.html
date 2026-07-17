@@ -1,0 +1,94 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="login-page">
+
+    <div class="login-container">
+
+        <!-- Left -->
+
+        <div class="login-left">
+
+            <p class="login-tag">
+                SCENTIDO
+            </p>
+
+            <h1>
+
+                Welcome Back
+
+            </h1>
+
+            <p>
+
+                Sign in to continue your luxury fragrance journey.
+
+            </p>
+
+            <form>
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                >
+
+                <input
+                    type="password"
+                    placeholder="Password"
+                >
+
+                <button
+                    type="button"
+                    id="loginBtn">
+
+                    Sign In
+
+                </button>
+
+            </form>
+
+            <div class="login-links">
+
+                <a href="#">Forgot Password?</a>
+
+                <a href="{% url 'register' %}">
+
+                    Create Account
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="login-right">
+
+            <div class="login-overlay">
+
+                <h2>
+
+                    Crafted Beyond Fragrance
+
+                </h2>
+
+                <p>
+
+                    Experience the world's finest niche perfumes.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endblock %}

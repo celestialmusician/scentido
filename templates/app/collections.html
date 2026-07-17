@@ -1,0 +1,298 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %}
+
+Collections | SCENTIDO
+
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+      href="{% static 'css/collections.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+
+<!--==========================================
+            COLLECTION HERO
+===========================================-->
+
+<section class="collections-hero">
+
+    <div class="container-custom">
+
+        <div class="collections-heading">
+
+            <span class="collections-label">
+
+                Signature Collection
+
+            </span>
+
+            <h1 class="collections-title">
+
+                Discover
+                <br>
+                Every Fragrance
+
+            </h1>
+
+            <p class="collections-description">
+
+                Explore timeless creations crafted with
+                elegance, precision and modern luxury.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==========================================
+            FILTER
+===========================================-->
+
+<section class="collections-filter">
+
+    <div class="container-custom">
+
+        <div class="filter-wrapper">
+
+            <button class="filter-btn active">
+
+                All
+
+            </button>
+
+            <button class="filter-btn">
+
+                Men
+
+            </button>
+
+            <button class="filter-btn">
+
+                Women
+
+            </button>
+
+            <button class="filter-btn">
+
+                Unisex
+
+            </button>
+
+            <button class="filter-btn">
+
+                Signature
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==========================================
+            PRODUCT GRID
+===========================================-->
+
+<section class="collections-grid">
+
+    <div class="container-custom">
+
+        <div class="products-grid">
+
+
+            <!-- NOIR -->
+
+            <article class="product-card">
+
+    <!-- Wishlist -->
+
+    <div class="product-wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+    <!-- Product Image -->
+
+    <a href="#">
+
+        <img src="{% static 'images/products/noir.png' %}"
+             alt="NOIR">
+
+    </a>
+
+    <!-- Product Info -->
+
+    <h3>
+
+        NOIR
+
+    </h3>
+
+    <p>
+
+        Eau De Parfum
+
+    </p>
+
+    <span>
+
+        ₹ 3,999
+
+    </span>
+
+    <!-- Action Button -->
+
+    <div class="product-actions">
+
+        <a
+            class="product-btn quick-view-btn"
+
+            data-name="NOIR"
+
+    data-price="₹ 3,999"
+
+    data-subtitle="Deep Woody Luxury"
+
+            data-image="{% static 'images/products/noir.png' %}"
+
+            data-slug="noir"
+
+            href="javascript:void(0)">
+
+            <i class="fa-solid fa-eye"></i>
+
+            Quick View
+
+        </a>
+
+        
+
+    </div>
+
+</article>
+
+
+            <!-- BLANC -->
+
+            <article class="product-card">
+
+    <div class="product-wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+    <a href="#">
+
+        <img src="{% static 'images/products/blanc.png' %}"
+             alt="BLANC">
+
+    </a>
+
+    <h3>BLANC</h3>
+
+    <p>Eau De Parfum</p>
+
+    <span>₹ 3,499</span>
+
+    <div class="product-actions">
+
+       <a
+            class="product-btn quick-view-btn"
+
+            data-name="BLANC"
+
+            data-price="₹ 3,499"
+
+            data-subtitle="Fresh Floral Elegance"
+
+            data-image="{% static 'images/products/blanc.png' %}"
+
+            data-slug="blanc"
+
+            href="javascript:void(0)">
+
+            <i class="fa-solid fa-eye"></i>
+
+            Quick View
+
+        </a>
+
+    </div>
+
+</article>
+
+
+            <!-- OUD ROYALE -->
+
+            <article class="product-card">
+
+    <div class="product-wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+    <a href="#">
+
+        <img src="{% static 'images/products/oud-royale.png' %}"
+             alt="OUD ROYALE">
+
+    </a>
+
+    <h3>OUD ROYALE</h3>
+
+    <p>Eau De Parfum</p>
+
+    <span>₹ 5,999</span>
+
+    <div class="product-actions">
+
+        <a
+    class="product-btn quick-view-btn"
+
+    data-name="OUD ROYALE"
+
+    data-price="₹ 5,999"
+
+    data-subtitle="Royal Oriental Oud"
+
+    data-image="{% static 'images/products/oud-royale.png' %}"
+
+    data-slug="oud-royale"
+
+    href="javascript:void(0)">
+
+    <i class="fa-solid fa-eye"></i>
+
+    Quick View
+
+</a>
+
+    </div>
+
+</article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

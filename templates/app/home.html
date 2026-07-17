@@ -1,0 +1,523 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}
+SCENTIDO | Crafted Beyond Fragrance
+{% endblock %}
+
+{% block content %}
+
+
+
+<!--==========================================
+                HERO
+===========================================-->
+
+<section class="hero">
+
+    <div class="container-custom">
+
+        <div class="hero-wrapper">
+
+            <!--==============================
+                    LEFT CONTENT
+            ==============================-->
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+
+                    Crafted Beyond Fragrance
+
+                </span>
+
+                <h1 class="hero-title">
+
+                    DISCOVER
+
+                    <br>
+
+                    THE ART OF
+
+                    <br>
+
+                    FRAGRANCE
+
+                </h1>
+
+                <p class="hero-description">
+
+                    Discover a collection of timeless perfumes
+                    crafted with exceptional ingredients,
+                    refined artistry, and unforgettable elegance.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="{% url 'collections' %}"
+
+                       class="btn-luxury">
+
+                        <span>
+
+                            Explore Collection
+
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right-long"></i>
+
+                    </a>
+
+                    <a href="{% url 'story' %}"
+
+                       class="hero-secondary">
+
+                        Our Story
+
+                    </a>
+
+                </div>
+
+            </div>
+
+                        <!--==============================
+                    RIGHT CONTENT
+            ==============================-->
+
+            <div class="hero-media">
+
+                <div class="hero-image-box">
+
+                    <img
+
+                        src="{% static 'images/hero/perfume-hero.png' %}"
+
+                        alt="SCENTIDO Perfume"
+
+                        class="hero-image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+
+    <span>Scroll</span>
+
+    <div class="hero-scroll-line"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================
+            LUXURY MARQUEE
+======================================= -->
+
+<section class="luxury-marquee">
+
+    <div class="marquee-track">
+
+        <div class="marquee-content">
+
+            <span>CRAFTED</span>
+
+            <span>•</span>
+
+            <span>SCENTIDO</span>
+
+            <span>•</span>
+
+            <span>LUXURY</span>
+
+            <span>•</span>
+
+            <span>PERFUME</span>
+
+            <span>•</span>
+
+            <span>TIMELESS</span>
+
+            <span>•</span>
+
+            <span>BLACK EDITION</span>
+
+            <span>•</span>
+
+            <span>CRAFTED</span>
+
+            <span>•</span>
+
+            <span>SCENTIDO</span>
+
+            <span>•</span>
+
+            <span>LUXURY</span>
+
+            <span>•</span>
+
+            <span>PERFUME</span>
+
+            <span>•</span>
+
+            <span>TIMELESS</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        SIGNATURE COLLECTION
+========================================== -->
+
+<section class="signature-section">
+
+    <div class="container-custom">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                Signature Collection
+
+            </span>
+
+            <h2 class="section-title">
+
+                Crafted For Every
+                <br>
+                Extraordinary Moment
+
+            </h2>
+
+            <p class="section-description">
+
+                Discover our most iconic fragrances,
+                designed with timeless elegance and
+                exceptional craftsmanship.
+
+            </p>
+
+        </div>
+
+        <div class="collection-list">
+
+            <!-- Item 01 -->
+
+            <article class="collection-item">
+
+    <div class="collection-number">
+
+    
+
+    </div>
+
+    <div class="collection-content">
+
+        <h3>
+
+            NOIR
+
+        </h3>
+
+        <p>
+
+            Deep woody notes with rich amber
+            and luxurious spices.
+
+        </p>
+
+    </div>
+
+    <div class="collection-image">
+
+        <img
+
+            src="{% static 'images/products/noir.png' %}"
+
+            alt="NOIR">
+
+    </div>
+
+    <a href="{% url 'collections' %}"
+
+       class="collection-link">
+
+        Discover
+
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+    </a>
+
+</article>
+
+            <!-- Item 02 -->
+
+            <article class="collection-item">
+
+    <div class="collection-number">
+
+        
+
+    </div>
+
+    <div class="collection-content">
+
+        <h3>
+
+            BLANC
+
+        </h3>
+
+        <p>
+
+            Fresh white musk blended with
+            elegant floral accords.
+
+        </p>
+
+    </div>
+
+    <div class="collection-image">
+
+        <img
+
+            src="{% static 'images/products/blanc.png' %}"
+
+            alt="BLANC">
+
+    </div>
+
+    <a href="{% url 'collections' %}"
+
+       class="collection-link">
+
+        Discover
+
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+    </a>
+
+</article>
+
+            <!-- Item 03 -->
+
+            <article class="collection-item">
+
+    <div class="collection-number">
+
+       
+
+    </div>
+
+    <div class="collection-content">
+
+        <h3>
+
+            OUD ROYALE
+
+        </h3>
+
+        <p>
+
+            A bold oriental masterpiece
+            inspired by timeless luxury.
+
+        </p>
+
+    </div>
+
+    <div class="collection-image">
+
+        <img
+
+            src="{% static 'images/products/oud-royale.png' %}"
+
+            alt="OUD ROYALE">
+
+    </div>
+
+    <a href="{% url 'collections' %}"
+
+       class="collection-link">
+
+        Discover
+
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+    </a>
+
+</article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        BRAND STORY
+====================================== -->
+
+<section class="brand-story">
+
+    <div class="container-custom">
+
+        <div class="brand-grid">
+
+            <!-- LEFT -->
+
+            <div class="brand-image">
+
+                <img
+
+                    src="{% static 'images/background/story-image.jpg' %}"
+
+                    alt="SCENTIDO Story">
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="brand-content">
+
+                <span class="brand-label">
+
+                    OUR PHILOSOPHY
+
+                </span>
+
+                <h2>
+
+                    Luxury Is
+                    <br>
+                    Not Created.
+                    <br>
+                    It Is Remembered.
+
+                </h2>
+
+                <p>
+
+                    Every fragrance begins with a story.
+                    Inspired by timeless elegance,
+                    handcrafted with exceptional attention
+                    to every detail.
+
+                </p>
+
+                <a href="href="{% url 'story' %}""
+
+                   class="btn-luxury">
+
+                    <span>
+
+                        Read Our Story
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right-long"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        FEATURED PRODUCTS
+========================================== -->
+
+<section class="products-section">
+
+    <div class="container-custom">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                Featured Collection
+
+            </span>
+
+            <h2 class="section-title">
+
+                Our Best Sellers
+
+            </h2>
+
+            <p class="section-description">
+
+                A curated collection of our most loved fragrances,
+                designed for every occasion.
+
+            </p>
+
+        </div>
+
+        <div class="products-grid">
+
+            <!-- Product Card 1 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img src="{% static 'images/products/noir.png' %}"
+
+                         alt="Noir">
+
+                </div>
+
+                <span class="product-category">
+
+                    Eau De Parfum
+
+                </span>
+
+                <h3>
+
+                    Noir
+
+                </h3>
+
+                <p class="product-price">
+
+                    ₹3,999
+
+                </p>
+
+                <a href="#" class="btn-luxury">
+
+                    <span>
+
+                        Explore
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right-long"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

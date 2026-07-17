@@ -1,0 +1,356 @@
+/*==================================================
+            QUICK VIEW MODAL
+==================================================*/
+
+.quick-view-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(15,15,15,.45);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.45s ease;
+
+    z-index:9999;
+
+}
+
+
+/*==========================================
+            ACTIVE
+==========================================*/
+
+.quick-view-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/*==========================================
+            MODAL
+==========================================*/
+
+.quick-view-modal{
+
+    position:relative;
+
+    width:min(1080px,92%);
+
+    background:#ffffff;
+
+    border-radius:34px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    overflow:hidden;
+
+    transform:translateY(50px) scale(.96);
+
+    transition:.5s cubic-bezier(.19,1,.22,1);
+
+    box-shadow:
+
+        0 40px 100px rgba(0,0,0,.18);
+
+}
+
+
+.quick-view-overlay.active .quick-view-modal{
+
+    transform:
+
+        translateY(0)
+
+        scale(1);
+
+}
+
+/*==========================================
+            IMAGE
+==========================================*/
+
+.quick-image{
+
+    background:#fafaf8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px;
+
+}
+
+
+.quick-image img{
+
+    width:100%;
+
+    max-width:340px;
+
+    transition:.7s cubic-bezier(.19,1,.22,1);
+
+    filter:
+
+        drop-shadow(
+
+            0 30px 60px rgba(0,0,0,.18)
+
+        );
+
+}
+
+
+.quick-view-overlay.active .quick-image img{
+
+    transform:
+
+        translateY(-10px)
+
+        scale(1.03);
+
+}
+
+/*==========================================
+            CONTENT
+==========================================*/
+
+.quick-content{
+
+    padding:70px 60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+.quick-label{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-size:13px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#888;
+
+}
+
+
+.quick-content h2{
+
+    margin-bottom:18px;
+
+    font-family:var(--font-heading);
+
+    font-size:60px;
+
+    font-weight:500;
+
+    line-height:1;
+
+    color:#111;
+
+}
+
+
+.quick-content p{
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+.quick-price{
+
+    margin-bottom:40px;
+
+    font-size:34px;
+
+    font-weight:600;
+
+    color:#111;
+
+}
+
+/*==========================================
+            CLOSE
+==========================================*/
+
+.quick-close{
+
+    position:absolute;
+
+    top:24px;
+
+    right:24px;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    z-index:2;
+
+}
+
+
+.quick-close:hover{
+
+    transform:rotate(90deg);
+
+}
+
+/*==========================================
+            BUTTONS
+==========================================*/
+
+.quick-buttons{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/*==========================================
+            RESPONSIVE
+==========================================*/
+
+@media(max-width:900px){
+
+    .quick-view-modal{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .quick-content{
+
+        padding:45px 35px;
+
+    }
+
+    .quick-content h2{
+
+        font-size:42px;
+
+    }
+
+}
+
+/*==========================================
+        QUICK VIEW QUANTITY
+==========================================*/
+
+.quick-quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:24px;
+
+}
+
+.quick-quantity button{
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quick-quantity button:hover{
+
+    transform:scale(1.08);
+
+    background:#000;
+
+}
+
+.quick-quantity span{
+
+    min-width:32px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#111;
+
+    user-select:none;
+
+}

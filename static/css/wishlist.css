@@ -1,0 +1,186 @@
+.wishlist-page{
+
+    padding:120px 0;
+
+}
+
+.wishlist-header{
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+.wishlist-header h1{
+
+    font-size:64px;
+
+    font-family:var(--font-heading);
+
+}
+
+.wishlist-card{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:50px;
+
+    margin-bottom:40px;
+
+    padding:35px;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.wishlist-image{
+
+    text-align:center;
+
+}
+
+.wishlist-image img{
+
+    width:220px;
+
+}
+
+.wishlist-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.wishlist-content h2{
+
+    font-size:48px;
+
+    margin-bottom:18px;
+
+}
+
+.wishlist-price{
+
+    font-size:30px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+}
+
+.wishlist-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.wishlist-empty{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.wishlist-empty h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.wishlist-empty p{
+
+    margin-bottom:35px;
+
+}
+
+/*==========================================
+                RESPONSIVE
+==========================================*/
+
+@media (max-width:768px){
+
+    .wishlist-page{
+
+        padding:100px 0;
+    }
+
+    .wishlist-header{
+
+        margin-bottom:40px;
+    }
+
+    .wishlist-header h1{
+
+        font-size:44px;
+    }
+
+    .wishlist-card{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+        padding:24px;
+    }
+
+    .wishlist-image img{
+
+        width:160px;
+    }
+
+    .wishlist-content h2{
+
+        font-size:32px;
+    }
+
+    .wishlist-price{
+
+        font-size:24px;
+
+        margin-bottom:20px;
+    }
+
+    .wishlist-empty{
+
+        padding:80px 20px;
+    }
+
+    .wishlist-empty h2{
+
+        font-size:32px;
+    }
+}
+
+@media (max-width:480px){
+
+    .wishlist-header h1{
+
+        font-size:34px;
+    }
+
+    .wishlist-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+}

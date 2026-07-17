@@ -1,0 +1,115 @@
+/*==================================================
+                SCENTIDO
+            LUXURY MARQUEE
+==================================================*/
+
+.luxury-marquee{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    background:#050505;
+
+}
+
+.marquee-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:marqueeMove 28s linear infinite;
+
+}
+
+.marquee-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:45px;
+
+    white-space:nowrap;
+
+}
+
+.marquee-content span{
+
+    font-family:var(--font-heading);
+
+    font-size:38px;
+
+    font-weight:500;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.88);
+
+}
+
+@keyframes marqueeMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+.luxury-marquee:hover .marquee-track{
+
+    animation-play-state:paused;
+
+}
+
+
+/*==========================================
+                RESPONSIVE
+==========================================*/
+
+@media (max-width:768px){
+
+    .luxury-marquee{
+
+        padding:24px 0;
+    }
+
+    .marquee-content{
+
+        gap:28px;
+    }
+
+    .marquee-content span{
+
+        font-size:24px;
+
+        letter-spacing:4px;
+    }
+}
+
+@media (max-width:480px){
+
+    .marquee-content span{
+
+        font-size:18px;
+
+        letter-spacing:3px;
+    }
+}

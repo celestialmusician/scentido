@@ -1,0 +1,23 @@
+# Environment
+.env
+
+# Virtual Environment
+env/
+venv/
+.venv/
+
+# Python
+_pycache_/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Database
+db.sqlite3
+
+# VS Code
+.vscode/
+
+# Static files
+staticfiles/

@@ -1,0 +1,72 @@
+<article class="product-card">
+
+    <!-- Wishlist -->
+
+    <button class="product-wishlist"
+            aria-label="Add to Wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
+
+    <!-- Product Image -->
+
+    <a href="#"
+       class="product-image">
+
+        <img src="{{ image }}"
+
+             alt="{{ name }}">
+
+    </a>
+
+
+    <!-- Product Info -->
+
+    <div class="product-content">
+
+        <span class="product-category">
+
+            {{ category }}
+
+        </span>
+
+        <h3>
+
+            {{ name }}
+
+        </h3>
+
+        <p>
+
+            {{ subtitle }}
+
+        </p>
+
+        <span class="product-price">
+
+            {{ price }}
+
+        </span>
+
+    </div>
+
+
+    <!-- Action -->
+
+    <div class="product-actions">
+
+        <a href="#"
+
+           class="product-btn">
+
+            <i class="fa-solid fa-eye"></i>
+
+            Quick View
+
+        </a>
+
+    </div>
+
+</article>
