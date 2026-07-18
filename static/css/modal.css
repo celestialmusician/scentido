@@ -1,6 +1,10 @@
 /*==================================================
-            QUICK VIEW MODAL
+            SCENTIDO QUICK VIEW MODAL
 ==================================================*/
+
+/*==========================================
+            OVERLAY
+==========================================*/
 
 .quick-view-overlay{
 
@@ -14,7 +18,9 @@
 
     align-items:center;
 
-    background:rgba(15,15,15,.45);
+    padding:40px;
+
+    background:rgba(0,0,0,.55);
 
     backdrop-filter:blur(18px);
 
@@ -24,12 +30,14 @@
 
     visibility:hidden;
 
-    transition:.45s ease;
+    transition:opacity .35s ease,
+               visibility .35s ease;
 
     z-index:9999;
 
-}
+    overflow-y:auto;
 
+}
 
 /*==========================================
             ACTIVE
@@ -43,7 +51,6 @@
 
 }
 
-
 /*==========================================
             MODAL
 ==========================================*/
@@ -52,46 +59,42 @@
 
     position:relative;
 
-    width:min(1080px,92%);
+    width:min(1120px,100%);
 
     background:#ffffff;
 
-    border-radius:34px;
+    border-radius:32px;
+
+    overflow:hidden;
 
     display:grid;
 
     grid-template-columns:1fr 1fr;
 
-    overflow:hidden;
-
-    transform:translateY(50px) scale(.96);
-
-    transition:.5s cubic-bezier(.19,1,.22,1);
-
     box-shadow:
+        0 30px 80px rgba(0,0,0,.18);
 
-        0 40px 100px rgba(0,0,0,.18);
+    transform:translateY(40px) scale(.96);
+
+    transition:transform .45s cubic-bezier(.19,1,.22,1);
+
+    margin:auto;
 
 }
 
-
 .quick-view-overlay.active .quick-view-modal{
 
-    transform:
-
-        translateY(0)
-
-        scale(1);
+    transform:translateY(0) scale(1);
 
 }
 
 /*==========================================
-            IMAGE
+            IMAGE SIDE
 ==========================================*/
 
 .quick-image{
 
-    background:#fafaf8;
+    background:#f8f8f6;
 
     display:flex;
 
@@ -99,127 +102,45 @@
 
     align-items:center;
 
-    padding:70px;
+    padding:60px;
+
+    min-height:620px;
 
 }
-
 
 .quick-image img{
 
     width:100%;
 
-    max-width:340px;
+    max-width:330px;
 
-    transition:.7s cubic-bezier(.19,1,.22,1);
+    height:auto;
 
-    filter:
+    object-fit:contain;
 
-        drop-shadow(
+    filter:drop-shadow(0 25px 45px rgba(0,0,0,.18));
 
-            0 30px 60px rgba(0,0,0,.18)
-
-        );
+    transition:transform .45s ease;
 
 }
-
 
 .quick-view-overlay.active .quick-image img{
 
-    transform:
-
-        translateY(-10px)
-
-        scale(1.03);
+    transform:scale(1.03);
 
 }
 
 /*==========================================
-            CONTENT
-==========================================*/
-
-.quick-content{
-
-    padding:70px 60px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-}
-
-
-.quick-label{
-
-    display:inline-block;
-
-    margin-bottom:18px;
-
-    font-size:13px;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    color:#888;
-
-}
-
-
-.quick-content h2{
-
-    margin-bottom:18px;
-
-    font-family:var(--font-heading);
-
-    font-size:60px;
-
-    font-weight:500;
-
-    line-height:1;
-
-    color:#111;
-
-}
-
-
-.quick-content p{
-
-    margin-bottom:30px;
-
-    font-size:18px;
-
-    color:#666;
-
-    line-height:1.9;
-
-}
-
-
-.quick-price{
-
-    margin-bottom:40px;
-
-    font-size:34px;
-
-    font-weight:600;
-
-    color:#111;
-
-}
-
-/*==========================================
-            CLOSE
+            CLOSE BUTTON
 ==========================================*/
 
 .quick-close{
 
     position:absolute;
 
-    top:24px;
+    top:20px;
 
-    right:24px;
+    right:20px;
 
     width:48px;
 
@@ -235,12 +156,17 @@
 
     cursor:pointer;
 
-    transition:.35s;
+    display:flex;
 
-    z-index:2;
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+    z-index:20;
 
 }
-
 
 .quick-close:hover{
 
@@ -248,50 +174,84 @@
 
 }
 
-/*==========================================
-            BUTTONS
-==========================================*/
+/*==================================================
+            CONTENT
+==================================================*/
 
-.quick-buttons{
+.quick-content{
 
     display:flex;
 
-    gap:16px;
+    flex-direction:column;
 
-    flex-wrap:wrap;
+    justify-content:center;
+
+    padding:60px;
+
+    overflow-y:auto;
+
+}
+
+.quick-label{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#888;
+
+}
+
+.quick-content h2{
+
+    margin:0 0 16px;
+
+    font-size:56px;
+
+    line-height:1;
+
+    font-family:var(--font-heading);
+
+    font-weight:500;
+
+    color:#111;
+
+}
+
+.quick-content p{
+
+    margin:0 0 24px;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+.quick-price{
+
+    margin-bottom:32px;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    color:#111;
 
 }
 
 
-/*==========================================
-            RESPONSIVE
-==========================================*/
-
-@media(max-width:900px){
-
-    .quick-view-modal{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .quick-content{
-
-        padding:45px 35px;
-
-    }
-
-    .quick-content h2{
-
-        font-size:42px;
-
-    }
-
-}
-
-/*==========================================
-        QUICK VIEW QUANTITY
-==========================================*/
+/*==================================================
+            QUANTITY
+==================================================*/
 
 .quick-quantity{
 
@@ -299,11 +259,9 @@
 
     align-items:center;
 
-    justify-content:center;
-
     gap:18px;
 
-    margin-bottom:24px;
+    margin-bottom:32px;
 
 }
 
@@ -323,11 +281,9 @@
 
     font-size:22px;
 
-    font-weight:600;
-
     cursor:pointer;
 
-    transition:.3s;
+    transition:.25s;
 
 }
 
@@ -335,13 +291,11 @@
 
     transform:scale(1.08);
 
-    background:#000;
-
 }
 
 .quick-quantity span{
 
-    min-width:32px;
+    min-width:28px;
 
     text-align:center;
 
@@ -349,8 +303,258 @@
 
     font-weight:600;
 
+}
+
+
+/*==================================================
+            BUTTONS
+==================================================*/
+
+.quick-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:auto;
+
+}
+
+.quick-buttons button,
+.quick-buttons a{
+
+    width:100%;
+
+    height:56px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:#111;
+
+    color:#fff;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#000;
+
+}
+
+.btn-buy-now{
+
+    background:#fff;
+
     color:#111;
 
-    user-select:none;
+    border:1px solid #111;
+
+}
+
+.btn-buy-now:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.btn-secondary{
+
+    background:#f5f5f5;
+
+    color:#111;
+
+    border:none;
+
+}
+
+.btn-secondary:hover{
+
+    background:#ececec;
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    color:#111;
+
+    border:1px solid #ddd;
+
+}
+
+.btn-outline:hover{
+
+    border-color:#111;
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media (max-width:900px){
+
+    .quick-view-overlay{
+
+        align-items:flex-start;
+
+        padding:20px;
+
+        overflow-y:auto;
+
+    }
+
+    .quick-view-modal{
+
+        width:100%;
+
+        max-width:560px;
+
+        grid-template-columns:1fr;
+
+        margin:20px auto;
+
+        border-radius:24px;
+
+    }
+
+    .quick-image{
+
+        min-height:320px;
+
+        padding:40px;
+
+    }
+
+    .quick-image img{
+
+        max-width:220px;
+
+    }
+
+    .quick-content{
+
+        padding:32px 24px;
+
+    }
+
+    .quick-content h2{
+
+        font-size:36px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .quick-view-overlay{
+
+        padding:12px;
+
+    }
+
+    .quick-view-modal{
+
+        border-radius:18px;
+
+    }
+
+    .quick-image{
+
+        min-height:260px;
+
+        padding:28px;
+
+    }
+
+    .quick-image img{
+
+        max-width:180px;
+
+    }
+
+    .quick-content{
+
+        padding:24px 20px;
+
+    }
+
+    .quick-content h2{
+
+        font-size:30px;
+
+    }
+
+    .quick-price{
+
+        font-size:26px;
+
+    }
+
+    .quick-buttons{
+
+        gap:12px;
+
+    }
+
+    .quick-buttons button,
+    .quick-buttons a{
+
+        height:52px;
+
+    }
+
+
+    @media (max-width:768px){
+
+    .quick-view-overlay{
+
+        align-items:flex-start;
+
+        overflow-y:auto;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+    .quick-view-modal{
+
+        margin:20px auto;
+
+        max-height:none;
+
+    }
+
+    }
 
 }

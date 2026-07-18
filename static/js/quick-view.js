@@ -26,9 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let quantity = 1;
 
-    const buttons = document.querySelectorAll(".quick-view-btn");
+const buttons = document.querySelectorAll(".quick-view-btn");   
 
-    //--------------------------------------
+buttons.forEach(button => {
+    console.log(button.dataset.link);
+});
+
+
+//--------------------------------------
     // OPEN QUICK VIEW
     //--------------------------------------
 
@@ -36,14 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", (e) => {
 
-            e.preventDefault();
+    // Explore button click cheythaal normal link follow cheyyatte
+    if (e.target.closest(".btn-luxury")) {
+        return;
+    }
 
-            quickImage.src = button.dataset.image;
-            quickTitle.textContent = button.dataset.name;
-            quickSubtitle.textContent = button.dataset.subtitle;
-            quickPrice.textContent = button.dataset.price;
+    e.preventDefault();
 
-            quickLink.href = "/product/" + button.dataset.slug + "/";
+    quickImage.src = button.dataset.image;
+    quickTitle.textContent = button.dataset.name;
+    quickSubtitle.textContent = button.dataset.subtitle;
+    quickPrice.textContent = button.dataset.price;
+
+    if (button.dataset.link) {
+        quickLink.href = button.dataset.link;
+        console.log(quickLink.href);
+    }
 
             if (cartBtn) {
 
@@ -76,7 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
             qtyValue.textContent = quantity;
 
             modal.classList.add("active");
-            document.body.style.overflow = "hidden";
+
+if (window.lenis) {
+    window.lenis.stop();
+}
+document.documentElement.classList.add("lenis-stopped");
+document.body.style.overflow = "hidden";
 
         });
 
@@ -191,7 +209,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function closeModal() {
 
         modal.classList.remove("active");
-        document.body.style.overflow = "";
+
+if (window.lenis) {
+    window.lenis.start();
+}
+document.documentElement.classList.remove("lenis-stopped");
+document.body.style.overflow = "";
 
     }
 
@@ -208,6 +231,24 @@ document.addEventListener("DOMContentLoaded", () => {
             closeModal();
 
         }
+
+    if (quickLink) {
+
+    quickLink.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const url = this.href;
+
+        closeModal();
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, 300);
+
+    });
+
+}
 
     });
 

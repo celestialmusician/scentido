@@ -7,7 +7,6 @@
 /*==========================================
                 NAVBAR
 ==========================================*/
-
 .navbar{
 
     padding:16px 0;
@@ -381,102 +380,7 @@
 }
 
 
-/* Mobile */
 
-@media (max-width:768px){
-
-    .navbar{
-
-        height:76px;
-
-        display:flex;
-
-        align-items:center;
-
-        padding:10px 0 14px;
-
-    }
-
-    .logo-title{
-
-        font-size:22px;
-
-        letter-spacing:2px;
-
-    }
-
-    .logo-tagline{
-
-        display:none;
-
-    }
-
-    .menu-toggle{
-
-        display:none;
-
-    }
-
-    .nav-menu{
-
-        position:fixed;
-
-        top:72px;
-
-        left:-100%;
-
-        width:100%;
-
-        height:calc(100vh - 72px);
-
-        background:#fff;
-
-        flex-direction:column;
-
-        justify-content:flex-start;
-
-        align-items:center;
-
-        gap:24px;
-
-        padding-top:40px;
-
-        transition:var(--transition-normal);
-
-        z-index:999;
-
-    }
-
-    .nav-menu.active{
-
-        left:0;
-
-    }
-
-    .nav-link{
-
-        width:60px;
-
-        height:60px;
-
-        font-size:22px;
-
-    }
-
-
-.wishlist-count,
-.cart-count{
-
-    margin-left:auto;
-
-    right:0;
-
-    top:0;
-
-    position:relative;
-
-}
-}
 
 /*==================================================
             MOBILE DRAWER MENU
@@ -636,7 +540,7 @@
 
     .menu-toggle{
 
-        display:flex;
+        display:flex !important;
 
         align-items:center;
 
@@ -648,6 +552,52 @@
 
     }
 
+    .mobile-right{
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    align-items:center !important;
+
+    justify-content:flex-end !important;
+
+    gap:20px !important;
+
+    margin-left:auto;
+
+    }
+
+    .mobile-actions{
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    align-items:center !important;
+
+    gap:16px;
+
+    }
+
+    .mobile-action{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:var(--text-primary);
+
+    font-size:20px;
+
+    position:relative;
+
+    }
+
     .menu-toggle i{
 
         font-size:16px;
@@ -656,9 +606,15 @@
 
     .navbar-container{
 
-        padding:0 16px;
+    padding:0 16px;
 
-    }
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
 
     .logo-title{
 
@@ -674,4 +630,8 @@
 
     }
 
+}
+
+.mobile-right{
+    display:none;
 }

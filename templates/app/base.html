@@ -2,7 +2,7 @@
 
 
 {% load static %}
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -145,149 +145,17 @@
 
 </head>
 
-<header class="navbar">
-
-    <div class="container-custom navbar-container">
-
-        <!-- ==========================================
-                        LOGO
-        =========================================== -->
-
-        <a href="{% url 'home' %}" class="logo">
-
-            <span class="logo-title">
-                SCENTIDO
-            </span>
-
-            <span class="logo-tagline">
-                Crafted Beyond Fragrance
-            </span>
-
-        </a>
-
-
-        <!-- ==========================================
-                    DESKTOP NAVIGATION
-        =========================================== -->
-
-        <nav class="navbar-nav">
-
-            <ul class="nav-menu">
-
-                <li>
-                    <a href="{% url 'home' %}"
-                       class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
-                       title="Home">
-                        <i class="fa-solid fa-house"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{% url 'collections' %}"
-                       class="nav-link {% if request.resolver_match.url_name == 'collections' %}active{% endif %}"
-                       title="Collections">
-                        <i class="fa-solid fa-spray-can-sparkles"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{% url 'wishlist' %}"
-                       class="nav-link wishlist-nav"
-                       title="Wishlist">
-
-                        <i class="fa-regular fa-heart"></i>
-
-                        <span class="wishlist-count">
-                            0
-                        </span>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{% url 'cart' %}"
-                       class="nav-link cart-nav"
-                       title="Cart">
-
-                        <i class="fa-solid fa-bag-shopping"></i>
-
-                        <span class="cart-count">
-                            0
-                        </span>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{% url 'profile' %}"
-                       class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}"
-                       title="Profile">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-
-        <!-- ==========================================
-                    MOBILE MENU BUTTON
-        =========================================== -->
-
-        <button class="menu-toggle"
-                aria-label="Open Menu">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </div>
-
-</header>
-
-<!-- ==========================================
-                MOBILE MENU
-=========================================== -->
-
-<div class="mobile-menu-overlay"></div>
-
-<div class="mobile-menu">
-
-    <button class="mobile-close">
-
-        <i class="fa-solid fa-xmark"></i>
-
-    </button>
-
-    <a href="{% url 'home' %}">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-    </a>
-
-    <a href="{% url 'collections' %}">
-        <i class="fa-solid fa-spray-can-sparkles"></i>
-        <span>Collections</span>
-    </a>
-
-    <a href="{% url 'wishlist' %}">
-        <i class="fa-regular fa-heart"></i>
-        <span>Wishlist</span>
-    </a>
-
-    <a href="{% url 'cart' %}">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span>Add To Bag</span>
-    </a>
-
-    <a href="{% url 'profile' %}">
-        <i class="fa-regular fa-user"></i>
-        <span>Profile</span>
-    </a>
-
-</div>
-
 <body>
+
+    <a href="#main-content" class="skip-link">
+    
+    </a>
+
+
+    {% include "app/navbar.html" %}
+
+
+
 
     <!-- ==========================================
                     PRELOADER
@@ -343,10 +211,12 @@
         <div
             class="quick-view-overlay"
             id="quickView"
+            data-lenis-prevent
             aria-hidden="true">
 
             <div
                 class="quick-view-modal"
+                data-lenis-prevent
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="quickTitle">

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         smoothWheel: true,
 
-        syncTouch: true,
+        syncTouch: false,
 
         wheelMultiplier: 1,
 
