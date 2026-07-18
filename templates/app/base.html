@@ -136,6 +136,9 @@
     <link rel="stylesheet"
           href="{% static 'css/responsive.css' %}">
 
+    <link rel="stylesheet"
+      href="{% static 'css/whatsapp.css' %}">
+
     <!-- ==========================================
                 PAGE CSS
     =========================================== -->
@@ -349,6 +352,38 @@
         =========================================== -->
 
         {% include 'app/footer.html' %}
+        
+        <!-- ==========================================
+            WHATSAPP FLOATING BUTTON
+========================================== -->
+
+<div class="whatsapp-widget">
+
+    <div class="whatsapp-content">
+
+        <span class="whatsapp-title">
+
+            Need Help?
+
+        </span>
+
+        <span class="whatsapp-text">
+
+            Chat with a Fragrance Expert
+
+        </span>
+
+    </div>
+
+    <a href="#"
+       class="whatsapp-button"
+       aria-label="Chat on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+</div>
 
     </div>
     <!-- End Site Wrapper -->
@@ -395,6 +430,8 @@
     <script src="{% static 'js/wishlist-count.js' %}"></script>
 
     <script src="{% static 'js/cart-count.js' %}"></script>
+
+    <script src="{% static 'js/whatsapp.js' %}"></script>
 
 
 </body>

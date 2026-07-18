@@ -1,0 +1,166 @@
+/* ==========================================
+        WHATSAPP FLOATING WIDGET
+========================================== */
+
+.whatsapp-widget{
+
+    position:fixed;
+
+    right:28px;
+
+    bottom:28px;
+
+    z-index:9999;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+/* Card */
+
+.whatsapp-content{
+
+    background:#ffffff;
+
+    border:1px solid rgba(0,0,0,.08);
+
+    border-radius:18px;
+
+    padding:12px 18px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+}
+
+.whatsapp-title{
+
+    display:block;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+.whatsapp-text{
+
+    display:block;
+
+    margin-top:2px;
+
+    font-size:13px;
+
+    color:#666;
+
+    font-family:"Inter",sans-serif;
+
+}
+
+/* Button */
+
+.whatsapp-button{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    box-shadow:0 18px 40px rgba(37,211,102,.35);
+
+    transition:.35s ease;
+
+}
+
+.whatsapp-button:hover{
+
+    transform:translateY(-4px) scale(1.06);
+
+}
+
+.whatsapp-content:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .whatsapp-widget{
+
+        right:16px;
+
+        bottom:16px;
+
+    }
+
+    .whatsapp-content{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================
+        PULSE ANIMATION
+========================================== */
+
+.pulse .whatsapp-button{
+
+    animation: whatsappPulse .9s ease;
+
+}
+
+@keyframes whatsappPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    40%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+

@@ -10,6 +10,6 @@ window.addEventListener("load", function () {
         preloader.style.visibility = "hidden";
         preloader.style.pointerEvents = "none";
 
-    }, 1200);
+    }, 100);
 
 });
