@@ -635,3 +635,42 @@
 .mobile-right{
     display:none;
 }
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo-image{
+
+    height:250px;
+
+    width:auto;
+
+    display:block;
+
+    transition:.3s ease;
+
+}
+
+.logo-image:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/* RESPONSIVE SECTION */
+
+@media(max-width:768px){
+
+    .logo-image{
+
+        height: 180px;
+
+    }
+
+}

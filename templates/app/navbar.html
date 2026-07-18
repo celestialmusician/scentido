@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <header class="navbar">
 
     <div class="container-custom navbar-container">
@@ -5,15 +8,12 @@
         <!-- LOGO -->
         <a href="{% url 'home' %}" class="logo">
 
-            <span class="logo-title">
-                SCENTIDO
-            </span>
+    <img
+        src="{% static 'images/logo/logo.png' %}"
+        alt="SCENTIDO"
+        class="logo-image">
 
-            <span class="logo-tagline">
-                Crafted Beyond Fragrance
-            </span>
-
-        </a>
+</a>
 
         <!-- DESKTOP NAVIGATION -->
         <nav class="navbar-nav">
