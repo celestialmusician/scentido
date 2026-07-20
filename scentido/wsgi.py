@@ -1,5 +1,5 @@
 """
-WSGI config for scentido project.
+WSGI config for LINO project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

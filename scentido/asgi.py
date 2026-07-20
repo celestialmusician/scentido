@@ -1,5 +1,5 @@
 """
-ASGI config for scentido project.
+ASGI config for LINO project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

@@ -1,5 +1,5 @@
 //==========================================
-// SCENTIDO WISHLIST
+// LINO WISHLIST
 //==========================================
 
 document.addEventListener("DOMContentLoaded", () => {

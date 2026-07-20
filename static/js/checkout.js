@@ -1,5 +1,5 @@
 //==================================================
-// SCENTIDO - CHECKOUT
+// LINO - CHECKOUT
 //==================================================
 
 const container = document.getElementById("checkoutItems");

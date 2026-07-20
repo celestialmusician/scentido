@@ -1,5 +1,5 @@
 //==================================================
-// SCENTIDO - QUICK VIEW
+// LINO - QUICK VIEW
 //==================================================
 
 document.addEventListener("DOMContentLoaded", () => {

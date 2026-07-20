@@ -1,5 +1,5 @@
 /*==================================================
-            SCENTIDO NAVBAR
+            LINO NAVBAR
 ==================================================*/
 
 const navbar = document.querySelector(".navbar");
