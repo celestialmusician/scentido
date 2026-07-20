@@ -646,7 +646,7 @@
 
 .logo-image{
 
-    height:250px;
+    height:70px;
 
     width:auto;
 
@@ -665,12 +665,47 @@
 
 /* RESPONSIVE SECTION */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .logo-image{
 
-        height: 180px;
+        height:70px;
+
+        width:auto;
 
     }
 
 }
+
+@media (min-width: 992px) {
+
+    .navbar-container{
+
+        position: relative;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+    }
+
+    .logo{
+
+        position: absolute;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+    }
+
+    .navbar-nav{
+
+        margin-left: auto;
+
+    }
+
+}
+
