@@ -115,6 +115,16 @@ if (exists) {
 
             modal.classList.add("active");
 
+            const whatsapp =
+    document.getElementById("whatsappWidget");
+
+if (whatsapp){
+
+    whatsapp.classList.add("whatsapp-hidden");
+
+}
+            
+
 if (window.lenis) {
     window.lenis.stop();
 }
@@ -294,6 +304,15 @@ if (wishlistBtn) {
     function closeModal() {
 
         modal.classList.remove("active");
+
+        const whatsapp =
+    document.getElementById("whatsappWidget");
+
+if (whatsapp){
+
+    whatsapp.classList.remove("whatsapp-hidden");
+
+}
 
 if (window.lenis) {
     window.lenis.start();

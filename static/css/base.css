@@ -203,3 +203,16 @@ table{
 
 }
 
+.whatsapp-hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transform:translateY(20px);
+
+    transition:.3s ease;
+
+}
