@@ -180,13 +180,71 @@
 
 .quick-content{
 
+    position:relative;
+
     display:flex;
 
     flex-direction:column;
 
-    padding:60px;
+    padding:50px;
 
     overflow-y:auto;
+
+}
+
+.quick-heart{
+
+    position:absolute;
+
+    top:40px;
+
+    right:40px;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fafafa;
+
+    border:1px solid #e5e5e5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.quick-heart i{
+
+    font-size:18px;
+
+    color:#111;
+
+}
+
+.quick-heart:hover{
+
+    background:#111;
+
+    border-color:#111;
+
+    transform:translateY(-2px);
+
+}
+
+.quick-heart:hover i{
+
+    color:#fff;
 
 }
 
@@ -210,7 +268,7 @@
 
     margin:0 0 16px;
 
-    font-size:56px;
+    font-size:50px;
 
     line-height:1;
 
@@ -236,13 +294,31 @@
 
 .quick-price{
 
-    margin-bottom:32px;
+    flex:1;
 
-    font-size:32px;
+    margin:0;
 
-    font-weight:600;
+    font-size:30px;
+
+    font-weight:700;
 
     color:#111;
+
+}
+
+.quick-price-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    width:100%;
+
+    margin:18px 0 32px;
+
+    gap:30px;
 
 }
 
@@ -257,17 +333,19 @@
 
     align-items:center;
 
-    gap:18px;
+    justify-content:flex-end;
 
-    margin-bottom:32px;
+    gap:12px;
+
+    flex-shrink:0;
 
 }
 
 .quick-quantity button{
 
-    width:44px;
+    width:40px;
 
-    height:44px;
+    height:40px;
 
     border:none;
 
@@ -277,11 +355,11 @@
 
     color:#fff;
 
-    font-size:22px;
+    font-size:18px;
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s ease;
 
 }
 
@@ -314,46 +392,25 @@
 
     flex-direction:column;
 
-    gap:16px;
+    gap:10px;
 
-    margin-top:40px;
-
-    width:100%;
+    margin-top:auto;
 
 }
 
-.quick-buttons button,
-.quick-buttons a{
+.quick-buttons button{
 
-    width:100%;
+    height:46px;
 
-    min-height:64px;
+    border-radius:999px;
 
-    padding:0 24px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:12px;
-
-    border-radius:18px;
-
-    font-size:18px;
+    font-size:14px;
 
     font-weight:600;
 
-    line-height:1;
+    letter-spacing:.5px;
 
-    text-decoration:none;
-
-    cursor:pointer;
-
-    transition:all .3s ease;
-
-    box-sizing:border-box;
+    transition:.35s ease;
 
 }
 
@@ -370,14 +427,19 @@
 .quick-buttons .btn-primary{
 
     background:#111;
-   
+
+    color:#fff;
+
+    border:none;
 
 }
 
 .quick-buttons .btn-buy-now{
 
     background:#fff;
+
     color:#111;
+
     border:1px solid #111;
 
 }
@@ -562,3 +624,118 @@
     }
 
     }
+
+    /*==================================================
+        MOBILE QUICK VIEW FIX
+==================================================*/
+
+@media (max-width:768px){
+
+    .quick-view-overlay{
+
+        padding:12px;
+
+        align-items:center;
+
+        overflow:hidden;
+
+    }
+
+    .quick-view-modal{
+
+        width:100%;
+
+        max-width:380px;
+
+        height:92vh;
+
+        max-height:92vh;
+
+        display:flex;
+
+        flex-direction:column;
+
+        border-radius:20px;
+
+        overflow:hidden;
+
+        margin:0;
+
+    }
+
+    .quick-image{
+
+        min-height:180px;
+
+        height:180px;
+
+        padding:20px;
+
+        flex-shrink:0;
+
+    }
+
+    .quick-image img{
+
+        max-width:140px;
+
+    }
+
+    .quick-content{
+
+        flex:1;
+
+        padding:20px;
+
+        overflow:hidden;
+
+    }
+
+    .quick-content h2{
+
+        font-size:28px;
+
+        margin-bottom:8px;
+
+    }
+
+    .quick-content p{
+
+        font-size:14px;
+
+        margin-bottom:16px;
+
+        line-height:1.5;
+
+    }
+
+    .quick-price{
+
+        font-size:24px;
+
+    }
+
+    .quick-price-row{
+
+        margin:14px 0 20px;
+
+    }
+
+    .quick-buttons{
+
+        gap:10px;
+
+    }
+
+    .quick-buttons button,
+    .quick-buttons a{
+
+        height:46px;
+
+        font-size:14px;
+
+        border-radius:12px;
+
+    }
+
+}
