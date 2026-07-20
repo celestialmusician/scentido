@@ -88,6 +88,31 @@ buttons.forEach(button => {
             quantity = 1;
             qtyValue.textContent = quantity;
 
+            quantity = 1;
+qtyValue.textContent = quantity;
+
+let wishlist =
+    JSON.parse(localStorage.getItem("wishlist")) || [];
+
+const exists =
+    wishlist.find(item => item.slug === button.dataset.slug);
+
+if (exists) {
+
+    wishlistBtn.innerHTML = `
+        <i class="fa-solid fa-heart"></i>
+        Wishlisted
+    `;
+
+} else {
+
+    wishlistBtn.innerHTML = `
+        <i class="fa-regular fa-heart"></i>
+        Wishlist
+    `;
+
+}
+
             modal.classList.add("active");
 
 if (window.lenis) {
@@ -201,6 +226,66 @@ document.body.style.overflow = "hidden";
         });
 
     }
+
+//--------------------------------------
+// WISHLIST
+//--------------------------------------
+
+if (wishlistBtn) {
+
+    wishlistBtn.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        let wishlist =
+            JSON.parse(localStorage.getItem("wishlist")) || [];
+
+        const product = {
+
+            slug: wishlistBtn.dataset.slug,
+            name: wishlistBtn.dataset.name,
+            price: wishlistBtn.dataset.price,
+            image: wishlistBtn.dataset.image
+
+        };
+
+        const exists = wishlist.find(item => item.slug === product.slug);
+
+        if (!exists) {
+
+            wishlist.push(product);
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+            wishlistBtn.innerHTML = `
+                <i class="fa-solid fa-heart"></i>
+                Wishlisted
+            `;
+
+        } else {
+
+            wishlist = wishlist.filter(
+                item => item.slug !== product.slug
+            );
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+            wishlistBtn.innerHTML = `
+                <i class="fa-regular fa-heart"></i>
+                Wishlist
+            `;
+
+        }
+
+    });
+
+}   
 
     //--------------------------------------
     // CLOSE MODAL
