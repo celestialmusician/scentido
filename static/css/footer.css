@@ -427,15 +427,35 @@
 
 .footer-bottom{
 
-    display:flex;
+    display:grid;
 
-    justify-content:space-between;
+    grid-template-columns:1fr 1fr 1fr;
 
     align-items:center;
 
     gap:40px;
 
     padding-bottom:45px;
+
+}
+
+.footer-social{
+
+    justify-self:start;
+
+}
+
+.footer-copyright{
+
+    justify-self:center;
+
+    text-align:center;
+
+}
+
+.footer-payment{
+
+    justify-self:end;
 
 }
 
@@ -501,13 +521,25 @@
 
 .footer-copyright{
 
+    width:100%;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
     font-size:14px;
 
     color:#9f9f9f;
 
     letter-spacing:.5px;
-
-    text-align:center;
 
 }
 
@@ -786,13 +818,6 @@
 
     }
 
-    .footer-copyright{
-
-        font-size:13px;
-
-        line-height:1.8;
-
-    }
 
 }
 

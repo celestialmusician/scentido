@@ -55,6 +55,7 @@ buttons.forEach(button => {
 
     if (button.dataset.link) {
         quickLink.href = button.dataset.link;
+        console.log("DATA LINK:", button.dataset.link);
         console.log(quickLink.href);
     }
 
@@ -335,24 +336,6 @@ document.body.style.overflow = "";
             closeModal();
 
         }
-
-    if (quickLink) {
-
-    quickLink.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        const url = this.href;
-
-        closeModal();
-
-        setTimeout(() => {
-            window.location.href = url;
-        }, 300);
-
-    });
-
-}
 
     });
 
